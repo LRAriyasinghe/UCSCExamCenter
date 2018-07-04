@@ -1,0 +1,12 @@
+<div *ngIf="user">
+  <div style="margin-top: 100px;"></div>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">{{user.firstname}} {{user.lastname}}</h4>
+      <ul class="list-group">
+        <li class="list-group-item">Username: {{user.indexno}}</li>
+        <li class="list-group-item">Email: {{user.email}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" [routerLink]="['/admindashboard']">
+          <i class="fas fa-tachometer-alt"></i>
+          <span data-feather="home"></span>
+          Dashboard
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/adminselectionundergraduate']">
+          <i class="fas fa-graduation-cap"></i>
+          <span>
+          Undergraduate
+        </span>
+        </a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" [routerLink]="['/postgraduate']">
+            <i class="fas fa-user-graduate"></i>
+            <span>
+            Postgraduate
+          </span>
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" [routerLink]="['/adminreportgeneration']">
+            <i class="far fa-window-restore"></i>
+            <span>
+            Reports
+          </span>
+          </a>
+        </li>
+      
+      
+    </ul>
+
+   
+   
+  </div>
+</nav>

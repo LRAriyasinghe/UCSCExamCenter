@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <div class="col-md-10">
+      <div class="content">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a [routerLink]="['/admindashboard']">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Undergraduate</li>
+        </ol>
+        <h2>Manage Undergraduate Exams</h2>
+        <div style="margin-top: 80px;"></div>
+  <form (submit)="onSubjectRegisterSubmit() ">
+    <fieldset>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="country">Year</label>
+          <select class="custom-select d-block w-100" id="year" [(ngModel)]="year" name="year" required>
+            
+            <option>2017/2018</option>
+            <option>2016/2017</option>
+            <option>2015/2016</option>
+            <option>2015/2014</option>
+          </select>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="country">Semester</label>
+          <select class="custom-select d-block w-100" id="semester" [(ngModel)]="semester" name="semester" required>
+            
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </div>
+     </div>
+      
+      <div style="margin: 50px;"></div>
+      
+      <div class="form-group">
+          <label>Subject 1</label>
+          <input type="text" [(ngModel)]="subject1" name="subject1" class="form-control" placeholder="Enter Subject 1">
+      </div>
+      <div class="form-group">
+          <label>Subject 2</label>
+          <input type="text" [(ngModel)]="subject2" name="subject2" class="form-control"  placeholder="Enter subject 2">
+      </div>
+      <div class="form-group">
+          <label>Subject 3</label>
+          <input type="text" [(ngModel)]="subject3" name="subject3" class="form-control"  placeholder="Enter subject 3">
+      </div>
+      <div class="form-group">
+          <label>Subject 4</label>
+          <input type="text" [(ngModel)]="subject4" name="subject4" class="form-control"  placeholder="Enter subject 4">
+      </div>
+      <div class="form-group">
+          <label>Subject 5</label>
+          <input type="text" [(ngModel)]="subject5" name="subject5" class="form-control"  placeholder="Enter subject 5">
+      </div>
+      <div class="form-group">
+          <label>Subject 6</label>
+          <input type="text" [(ngModel)]="subject6" name="subject6" class="form-control"  placeholder="Enter subject 6">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+        
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

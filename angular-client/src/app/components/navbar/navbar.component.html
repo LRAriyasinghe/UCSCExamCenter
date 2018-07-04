@@ -1,0 +1,62 @@
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " id="mainNav">
+    <a class="navbar-brand" [routerLink]="['/']">UCSC Exam Center</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+       
+    </ul>
+      
+      <ul class="navbar-nav navbar-right">
+          <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+              <a class="nav-link" [routerLink]="['/profile']">Profile</a>
+          </li>
+          
+        <li *ngIf="!authService.loggedIn()">
+          <button class="btn btn-md btn-outline-primary" id="loginbtn" (click)="open(content)">LogIn</button>
+        </li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" [routerLink]="['/register']">SignUp</a>
+        </li>
+        <li *ngIf="authService.loggedIn()">
+          <a class="nav-link" (click)="onLogoutClick()" href="#">LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Log In</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+  
+  
+        <div class="form-group">
+          <label>Username </label>
+          <input type="indexno" class="form-control" placeholder="Enter indexno" [(ngModel)]="indexno" name="indexno">
+  
+        </div>
+  
+  
+        <div class="form-group">
+          <label>Password </label>
+          <input type="password" class="form-control" placeholder="password" [(ngModel)]="password" name="password">
+        </div>
+  
+        <div class="modal-footer">
+          <button  class="btn btn-primary" value="Login" (click)="onLoginSubmit()">LogIn</button>
+        </div>
+  
+      </form>
+    </div>
+  
+  </ng-template>

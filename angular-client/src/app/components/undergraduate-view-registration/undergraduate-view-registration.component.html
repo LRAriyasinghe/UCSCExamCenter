@@ -1,0 +1,58 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <app-studentsidebar></app-studentsidebar>
+    </div>
+    <div class="col-md-10">
+      <div class="content">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a [routerLink]="['/studentdashboard']">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a [routerLink]="['/studentundergraduate']">Undergraduate</a>
+          </li>
+          <li class="breadcrumb-item active">View Exam</li>
+        </ol>
+        <div style="margin-top: 100px;"></div>
+        
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">View Exams</h4>
+           
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  
+                  <th>SUBJECTS</th>
+                  
+                </tr>
+              </thead>
+              <tbody *ngFor="let user of users">
+        
+                  <tr *ngFor="let subject of user.subjects">
+                    
+                    <td>{{subject}}</td>
+                    
+                  </tr>
+               
+                </tbody>
+             
+            </table>
+            <div>
+            
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!--content-->
+    </div>
+    <!--col-md-10-->
+  </div>
+  <!--row-->
+</div>
+<!--containerfluid-->
+

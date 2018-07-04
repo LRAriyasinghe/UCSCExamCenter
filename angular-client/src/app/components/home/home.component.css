@@ -1,0 +1,22 @@
+#carousel1{
+  width: 100%;
+  height: 100%;
+}
+#mycarousel{
+  width: 100%;
+  height: 100%;
+}
+.display-3{
+  font-size: 3em;
+  margin-left: 65px;
+}
+.lead{
+  margin-left: 320px;
+}
+#para{
+  margin-left: 250px;
+}
+#btn1{
+  width: 200px;
+  margin-left: 400px;
+}

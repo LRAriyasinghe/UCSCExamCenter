@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ng-snotify/styles/material.css";
+.img-main-carousel{
+    max-height: 600px;
+    width: 100%;
+}
+#carousel1{
+    width: 100%;
+}
+#mycarousel{
+    width: 100%;
+}

@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <div class="col-md-10">
+      <div class="content">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a [routerLink]="['/admindashboard']">Dashboard</a>
+          </li>
+         
+         
+          <li class="breadcrumb-item active">Reports</li>
+        </ol>
+        <div style="margin-top: 100px;"></div>
+        
+        <div class="card" id="reportcontent" #reportcontent>
+          <div class="card-body">
+            <h4 class="card-title">Register Exams</h4>
+           
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>INDEXNO</th>
+                  <th>SUBJECTS</th>
+                  
+                  
+                </tr>
+              </thead>
+              <tbody *ngFor="let user of users">
+        
+                <tr *ngFor="let subject of user.subjects">
+                  <td>{{user.indexno}}</td>
+                  
+                  <td>{{subject}}</td>
+                 
+                </tr>
+             
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+        <div style="margin-top: 50px;"></div>
+        <div>
+        <button class="btn btn-primary" (click) ="downloadPDF()">Print</button>
+      </div>
+
+      </div>
+      <!--content-->
+    </div>
+    <!--col-md-10-->
+  </div>
+  <!--row-->
+</div>
+<!--containerfluid-->
+
+<script>
+ document.getElementById("btn1").onclick = function() {
+  //disable
+  this.disabled = true;
+
+  //do some validation stuff
+}
+  </script>

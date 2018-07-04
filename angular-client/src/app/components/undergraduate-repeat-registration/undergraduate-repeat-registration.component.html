@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <app-studentsidebar></app-studentsidebar>
+      </div>
+      <div class="col-md-10">
+        <div class="content">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Undergraduate</a>
+            </li>
+            <li class="breadcrumb-item active">Register Exam</li>
+          </ol>
+          <div style="margin-top: 100px;"></div>
+          
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Register Exams</h4>
+             
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>YEAR</th>
+                    <th>SEMESTER</th>
+                    <th>SUBJECT</th>
+                    <th>OPERATIONS</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let exam of exams">
+          
+                  <tr *ngFor="let subject of exam.subjects">
+                    <td>{{exam.year}}</td>
+                    <td>{{exam.semester}}</td>
+                    <td>{{subject}}</td>
+                    <td> <button type="submit" class="btn btn-primary" id="btn1" (click)="onRegSub(subject,$event.target)">Choose</button>
+                         <button class="btn btn-danger" id="btn2" (click)="onRemovesub($event.target)">Remove</button></td>
+                  </tr>
+               
+                </tbody>
+              </table>
+              <div>
+              <button type="submit" class="btn btn-primary" (click)="onSubmitExams(subjects)">Submit</button> 
+            </div>
+            </div>
+          </div>
+  
+  
+        </div>
+        <!--content-->
+      </div>
+      <!--col-md-10-->
+    </div>
+    <!--row-->
+  </div>
+  <!--containerfluid-->
+  
+  <script>
+    var subject;
+    subject = this.subject1;
+    </script>

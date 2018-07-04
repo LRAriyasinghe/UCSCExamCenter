@@ -1,0 +1,24 @@
+{
+  "name": "ucsclibrary",
+  "version": "1.0.0",
+  "description": "MEAN stack Library system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "nodemon": "^1.17.5",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Lalanga Ariyasinghe",
+  "license": "ISC"
+}
